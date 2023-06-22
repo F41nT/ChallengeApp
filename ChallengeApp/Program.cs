@@ -1,7 +1,7 @@
-﻿string name = "Ewa"; //or "Adam"
+﻿string name = "Adam"; // "Ewa" or "Adam"
 string sex1 = "Kobieta";
 string sex2 = "Mężczyżna";
-int age = 20;
+int age = 18;
 
 if (name == "Ewa")
 {
