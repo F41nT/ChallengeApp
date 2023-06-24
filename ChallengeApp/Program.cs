@@ -1,32 +1,14 @@
-﻿string name = "Ewa"; // "Ewa" or "Adam"
-string sex1 = "Kobieta";
-string sex2 = "Mężczyżna";
-int age = 35;
+﻿using System.Reflection.Metadata;
 
-if (name == "Ewa")
-{
-    if (age < 18)
-    {
-        Console.WriteLine("Niepełnoletnia " + sex1);
-    }
-    else if (age < 30)
-    {
-        Console.WriteLine(sex1 + " poniżej 30 lat");
-    }
-}
+User user1 = new User();
+User user2 = new User();
+User user3 = new User();
+User user4 = new User();
 
-if (name == "Adam")
+user1.login = "Wojtek";
+class User
 {
-    if (age < 18)
-    {
-        Console.WriteLine("Niepełnoletni " + sex2);
-    }
-    else if (age < 30)
-    {
-        Console.WriteLine(sex2 + " poniżej 30 lat");
-    }
-}
-if (age > 30)
-{
-    Console.WriteLine(name + ", lat " + age);
+    public string login;
+    public string password;
+    private string username;
 }
