@@ -36,13 +36,8 @@ List<Employee> employees = new List<Employee>()
     Employee1, Employee2, Employee3, Employee4
 };
 
-var employee1Result = Employee1.Result;
-var employee2Result = Employee2.Result;
-var employee3Result = Employee3.Result;
-var employee4Result = Employee4.Result;
-
 var maxResult = -1;
-Employee? employeeWithMaxResult = null;
+Employee employeeWithMaxResult = null;
 
 foreach (var employee in employees)
 {
