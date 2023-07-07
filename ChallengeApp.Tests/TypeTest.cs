@@ -3,7 +3,7 @@
     public class TypeTests
     {
         [Test]
-        public void CheckIfTwoEmplyeesAreDifferentUsers()
+        public void CheckIfTwoEmployeesAreDifferentUsers()
         {
             //Arrange
             var employee1 = GetEmployee("Jan", "Kowalski","60");
@@ -25,7 +25,7 @@
 
         }
         [Test]
-        public void CheckIfStringValuesAreEqual()
+        public void CheckIfIntValuesAreEqual()
         {
             //Arrange
             var value1 = 1;
