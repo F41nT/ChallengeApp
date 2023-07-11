@@ -18,7 +18,7 @@ namespace ChallengeApp.Tests
             employee2.AddScore(-20);
 
             //Act
-            int result = employee1.Result;
+            float result = employee1.Result;
             var result2 = employee2.Result;
             //Assert
             Assert.AreEqual(0, result);
