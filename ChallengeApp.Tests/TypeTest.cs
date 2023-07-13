@@ -2,12 +2,16 @@
 {
     public class TypeTests
     {
+        private Employee GetEmployee(string name, string surname, string age)
+        {
+            return new Employee(name, surname, age);
+        }
         [Test]
         public void CheckIfTwoEmployeesAreDifferentUsers()
         {
             //Arrange
             var employee1 = GetEmployee("Jan", "Kowalski","60");
-            var employee2 = GetEmployee("Jan", "Kowalski", "60");
+            var employee2 = GetEmployee("Jan", "Kowalski","60");
 
             //Assert
             Assert.AreNotEqual(employee1, employee2);
@@ -45,10 +49,6 @@
             //Assert
             Assert.AreEqual(name1, name2);
 
-        }
-        private Employee GetEmployee(string name, string surname, string age)
-        {
-            return new Employee(name, surname, age) ;
         }
     }
 }
