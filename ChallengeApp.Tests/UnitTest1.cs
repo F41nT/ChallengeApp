@@ -36,15 +36,15 @@ namespace ChallengeApp.Tests
             var employee1 = new Employee("Wojtek", "Kowalski", "42");
             var employee2 = new Employee("Patrycja", "Klon", "22");
 
-            employee1.AddGrade(3);
+            employee1.AddGrade(5);
             employee1.AddGrade(1);
-            employee1.AddGrade(2);
-            employee1.AddGrade(4);
+            employee1.AddGrade(3);
+            employee1.AddGrade(7);
 
             employee2.AddGrade(1);
-            employee2.AddGrade(1);
-            employee2.AddGrade(1);
-            employee2.AddGrade(1);
+            employee2.AddGrade(9);
+            employee2.AddGrade(5);
+            employee2.AddGrade(6);
 
             //Act
 
