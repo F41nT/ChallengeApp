@@ -103,7 +103,7 @@ namespace ChallengeApp.Tests
             var statistics1 = employee1.GetStatistics();
             var statistics2 = employee2.GetStatistics();
 
-            //Assert
+            //Assert 
 
             Assert.AreEqual(Math.Round(7.33, 2), Math.Round(statistics1.Avg, 2));
             Assert.AreEqual(Math.Round(5.67, 2), Math.Round(statistics2.Avg, 2));
