@@ -97,7 +97,6 @@ namespace ChallengeApp.Tests
             employee2.AddGrade(5);
             employee2.AddGrade(9);
             employee2.AddGrade(3);
-
             //Act
 
             var statistics1 = employee1.GetStatistics();
