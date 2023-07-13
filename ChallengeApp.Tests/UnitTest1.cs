@@ -43,7 +43,7 @@ namespace ChallengeApp.Tests
 
             employee2.AddGrade(1);
             employee2.AddGrade(9);
-            employee2.AddGrade(5);
+            employee2.AddGrade(4);
             employee2.AddGrade(6);
 
             //Act
