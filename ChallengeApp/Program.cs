@@ -7,10 +7,10 @@ Employee Employee2 = new Employee("Tomek", "Sokolski", "31");
 Employee Employee3 = new Employee("Kamil", "Motyl", "27");
 Employee Employee4 = new Employee("Dorota", "Kowalska", "36");
 
-Employee1.AddGrade(1);
-Employee1.AddGrade(5);
+Employee1.AddGrade("f");
+Employee1.AddGrade("4");
 Employee1.AddGrade(10);
-Employee1.AddGrade(8);
+Employee1.AddGrade("800");
 Employee1.AddGrade(7);
 
 Employee2.AddGrade(5);
@@ -31,10 +31,10 @@ Employee4.AddGrade(6);
 Employee4.AddGrade(6);
 Employee4.AddGrade(6);
 
-var statistics0 = Employee1.GetStatistics();
-var statistics1 = Employee2.GetStatistics();
-var statistics2 = Employee3.GetStatistics();
-var statistics3 = Employee4.GetStatistics();
+var statistics1 = Employee1.GetStatistics();
+var statistics2 = Employee2.GetStatistics();
+var statistics3 = Employee3.GetStatistics();
+var statistics4 = Employee4.GetStatistics();
 
 //List<Employee> employees = new List<Employee>()
 //{
@@ -56,10 +56,6 @@ var statistics3 = Employee4.GetStatistics();
 //Console.WriteLine("Pracownik z najwyższą oceną to: " + employeeWithMaxResult.Name +" "+ employeeWithMaxResult.Surname + ", wiek: " + employeeWithMaxResult.Age + " lat");
 //Console.WriteLine("Wynik jaki osiągnął/ęła wynosi: " + employeeWithMaxResult.Result + " punktów");
 
-Console.WriteLine($"Average: {statistics0.Avg}");
-Console.WriteLine($"Maximum: {statistics0.Max}");
-Console.WriteLine($"Minimum: {statistics0.Min}");
-
 Console.WriteLine($"Average: {statistics1.Avg}");
 Console.WriteLine($"Maximum: {statistics1.Max}");
 Console.WriteLine($"Minimum: {statistics1.Min}");
@@ -71,3 +67,7 @@ Console.WriteLine($"Minimum: {statistics2.Min}");
 Console.WriteLine($"Average: {statistics3.Avg}");
 Console.WriteLine($"Maximum: {statistics3.Max}");
 Console.WriteLine($"Minimum: {statistics3.Min}");
+
+Console.WriteLine($"Average: {statistics4.Avg}");
+Console.WriteLine($"Maximum: {statistics4.Max}");
+Console.WriteLine($"Minimum: {statistics4.Min}");
