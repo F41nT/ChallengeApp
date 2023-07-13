@@ -2,10 +2,10 @@
 using static System.Formats.Asn1.AsnWriter;
 using ChallengeApp;
 
-Employee Employee1 = new Employee("Ewa","Nowak","29");
-Employee Employee2 = new Employee("Tomek","Sokolski","31");
-Employee Employee3 = new Employee("Kamil","Motyl","27");
-Employee Employee4 = new Employee("Dorota","Kowalska","36");
+Employee Employee1 = new Employee("Ewa", "Nowak", "29");
+Employee Employee2 = new Employee("Tomek", "Sokolski", "31");
+Employee Employee3 = new Employee("Kamil", "Motyl", "27");
+Employee Employee4 = new Employee("Dorota", "Kowalska", "36");
 
 Employee1.AddGrade(1);
 Employee1.AddGrade(5);
