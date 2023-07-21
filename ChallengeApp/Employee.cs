@@ -1,4 +1,6 @@
-﻿namespace ChallengeApp
+﻿using System.Diagnostics;
+
+namespace ChallengeApp
 {
     public class Employee
     {
@@ -23,7 +25,7 @@
 
         public void AddGrade(float grade)
         {
-            if (grade >= 0 && grade <=100) 
+            if (grade >= 0 && grade <= 100)
             {
                 this.grades.Add(grade);
             }
@@ -33,17 +35,42 @@
             }
         }
         public void AddGrade(string grade)
-        {   
+        {
             if (float.TryParse(grade, out float result))
             {
-                this.AddGrade(result);
+               this.AddGrade(result);
             }
-            else 
+            else
             {
-                Console.WriteLine("String is not float");
+               Console.WriteLine("String is not float");
             }
         }
+        public void AddGrade(double grade)
+        {
+            if (grade <= float.MaxValue && grade >= float.MinValue)
+            {
+                this.AddGrade((float)grade);
+            }
+            else
+            {
+                Console.WriteLine("Invalid grade value");
+            }
+        }
+      
+        public void AddGrade(int grade)
+        {
+            this.AddGrade((float)grade);
+        }
 
+        public void AddGrade(long grade)
+        {
+            this.AddGrade((float)grade);
+        }
+
+        public void AddGrade(byte grade)
+        {
+            this.AddGrade((float)grade);
+        }
         public Statistics GetStatistics() 
         {
             var statistics = new Statistics();
