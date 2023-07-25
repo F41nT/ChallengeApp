@@ -73,73 +73,73 @@ namespace ChallengeApp
         {
             this.AddGrade((float)grade);
         }
-        //public Statistics GetStatisticsWithWhile() 
-        //{
-        //    var statistics = new Statistics();
+        public Statistics GetStatisticsWithWhile()
+        {
+            var statistics = new Statistics();
 
-        //    statistics.Avg = 0;
+            statistics.Avg = 0;
 
-        //    statistics.Max = float.MinValue;
+            statistics.Max = float.MinValue;
 
-        //    statistics.Min = float.MaxValue;
+            statistics.Min = float.MaxValue;
 
-        //    var index = 0;
+            var index = 0;
 
-        //    while(index < this.grades.Count)
-        //    {
-        //        statistics.Max = Math.Max(statistics.Max, this.grades[index]);
-        //        statistics.Min = Math.Min(statistics.Min, this.grades[index]);
-        //        statistics.Avg += this.grades[index];
-        //        index++;
-        //    } 
+            while (index < this.grades.Count)
+            {
+                statistics.Max = Math.Max(statistics.Max, this.grades[index]);
+                statistics.Min = Math.Min(statistics.Min, this.grades[index]);
+                statistics.Avg += this.grades[index];
+                index++;
+            }
 
-        //    statistics.Avg /= this.grades.Count;
-        //    return statistics;
-        //}
-        //public Statistics GetStatisticsWithDoWhile()
-        //{
-        //    var statistics = new Statistics();
+            statistics.Avg /= this.grades.Count;
+            return statistics;
+        }
+        public Statistics GetStatisticsWithDoWhile()
+        {
+            var statistics = new Statistics();
 
-        //    statistics.Avg = 0;
+            statistics.Avg = 0;
 
-        //    statistics.Max = float.MinValue;
+            statistics.Max = float.MinValue;
 
-        //    statistics.Min = float.MaxValue;
+            statistics.Min = float.MaxValue;
 
-        //    var index = 0;
+            var index = 0;
 
-        //    do
-        //    {
-        //        statistics.Max = Math.Max(statistics.Max, this.grades[index]);
-        //        statistics.Min = Math.Min(statistics.Min, this.grades[index]);
-        //        statistics.Avg += this.grades[index];
-        //        index++;
-        //    } while (index < this.grades.Count);
+            do
+            {
+                statistics.Max = Math.Max(statistics.Max, this.grades[index]);
+                statistics.Min = Math.Min(statistics.Min, this.grades[index]);
+                statistics.Avg += this.grades[index];
+                index++;
+            } while (index < this.grades.Count);
 
-        //    statistics.Avg /= this.grades.Count;
-        //    return statistics;
-        //}
+            statistics.Avg /= this.grades.Count;
+            return statistics;
+        }
 
-        //public Statistics GetStatisticsWithForEach()
-        //{
-        //    var statistics = new Statistics();
+        public Statistics GetStatisticsWithForEach()
+        {
+            var statistics = new Statistics();
 
-        //    statistics.Avg = 0;
+            statistics.Avg = 0;
 
-        //    statistics.Max = float.MinValue;
+            statistics.Max = float.MinValue;
 
-        //    statistics.Min = float.MaxValue;
+            statistics.Min = float.MaxValue;
 
-        //    foreach (var grade in this.grades)
-        //    {
-        //        statistics.Max = Math.Max(statistics.Max, grade);
-        //        statistics.Min = Math.Min(statistics.Min, grade);
-        //        statistics.Avg += grade;
-        //    }
+            foreach (var grade in this.grades)
+            {
+                statistics.Max = Math.Max(statistics.Max, grade);
+                statistics.Min = Math.Min(statistics.Min, grade);
+                statistics.Avg += grade;
+            }
 
-        //    statistics.Avg /= this.grades.Count;
-        //    return statistics;
-        //}
+            statistics.Avg /= this.grades.Count;
+            return statistics;
+        }
 
         public Statistics GetStatisticsWithFor()
         {
