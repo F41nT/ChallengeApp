@@ -7,11 +7,11 @@ Employee Employee2 = new Employee("Tomek", "Sokolski", "31");
 Employee Employee3 = new Employee("Kamil", "Motyl", "27");
 Employee Employee4 = new Employee("Dorota", "Kowalska", "36");
 
-Employee1.AddGrade("f");
-Employee1.AddGrade("4");
-Employee1.AddGrade(10);
-Employee1.AddGrade("800");
-Employee1.AddGrade(7);
+Employee1.AddGrade(-1.7976931348623157E+308);
+Employee1.AddGrade("1");
+Employee1.AddGrade(3.402823466E+38);
+Employee1.AddGrade(9223372036854775807);
+Employee1.AddGrade(92);
 
 Employee2.AddGrade(5);
 Employee2.AddGrade(1);
