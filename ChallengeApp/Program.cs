@@ -122,3 +122,4 @@ var statistics = employee.GetStatisticsWithWhile();
 Console.WriteLine($"Average: {statistics.Avg}");
 Console.WriteLine($"Maximum: {statistics.Max}");
 Console.WriteLine($"Minimum: {statistics.Min}");
+Console.WriteLine($"Ocena: {statistics.AvgLetter}");

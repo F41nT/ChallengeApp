@@ -39,35 +39,31 @@ namespace ChallengeApp
             }
         }
       
-        public void AddGrade(int grade)
-        {
-            this.AddGrade((float)grade);
-        }
+        //public void AddGrade(int grade)
+        //{
+        //    this.AddGrade((float)grade);
+        //}
 
-        public void AddGrade(long grade)
-        {
-            this.AddGrade((float)grade);
-        }
+        //public void AddGrade(long grade)
+        //{
+        //    this.AddGrade((float)grade);
+        //}
 
-        public void AddGrade(byte grade)
-        {
-            this.AddGrade((float)grade);
-        }
+        //public void AddGrade(byte grade)
+        //{
+        //    this.AddGrade((float)grade);
+        //}
         public void AddGrade(string grade)
         {
-            switch (grade)
+            if (float.TryParse(grade, out float result))
             {
-                case string:
-                    if (float.TryParse(grade, out float result))
-                    {
-                        this.AddGrade(result);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Podana wartość jest nieprawidłowa, wpisać liczbę od 0 do 100, a w przypadku liter stosować oceny od a do e");
-                    }
-                    break;
+                this.AddGrade(result);
             }
+            else
+            {
+                Console.WriteLine("Podana wartość jest nieprawidłowa, wpisać liczbę od 0 do 100, a w przypadku liter stosować oceny od a do e");
+            }
+              
         }
         public void AddGrade(char grade)
         {
@@ -107,17 +103,17 @@ namespace ChallengeApp
                     break;
             }
         }
-        public void AddGrade(double grade)
-        {
-            if (grade <= float.MaxValue && grade >= float.MinValue)
-            {
-                this.AddGrade((float)grade);
-            }
-            else
-            {
-                Console.WriteLine("Podana wartość jest nieprawidłowa, wpisać liczbę od 0 do 100, a w przypadku liter stosować oceny od a do e");
-            }
-        }
+        //public void AddGrade(double grade)
+        //{
+        //    if (grade <= float.MaxValue && grade >= float.MinValue)
+        //    {
+        //        this.AddGrade((float)grade);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Podana wartość jest nieprawidłowa, wpisać liczbę od 0 do 100, a w przypadku liter stosować oceny od a do e");
+        //    }
+        //}
         public Statistics GetStatisticsWithWhile()
         {
             var statistics = new Statistics();
@@ -142,16 +138,16 @@ namespace ChallengeApp
 
             switch (statistics.Avg)
             {
-                case var avg when avg >= 80:
+                case var avg when avg >= 85:
                     statistics.AvgLetter = 'A';
                     break;
-                case var avg when avg >= 60:
+                case var avg when avg >= 65:
                     statistics.AvgLetter = 'B';
                     break;
-                case var avg when avg >= 40:
+                case var avg when avg >= 45:
                     statistics.AvgLetter = 'C';
                     break;
-                case var avg when avg >= 20:
+                case var avg when avg >= 25:
                     statistics.AvgLetter = 'D';
                     break;
                 default: 
