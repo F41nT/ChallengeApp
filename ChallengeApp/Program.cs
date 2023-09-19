@@ -14,9 +14,13 @@ if (input1 == "q" || input1 == "Q")
 {
     Environment.Exit(0);
 }
-else
+try
 {
     employee.AddGrade(input1);
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Znaleziono wyjątek: {ex.Message}");
 }
 
 while (true)
@@ -27,9 +31,13 @@ while (true)
     {
         break;
     }
-    else
+    try
     {
         employee.AddGrade(input2);
+    }
+    catch(Exception ex)
+    {
+        Console.WriteLine($"Znaleziono wyjątek: {ex.Message}");
     }
 }
 
