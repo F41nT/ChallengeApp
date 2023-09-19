@@ -45,6 +45,11 @@ namespace ChallengeApp
             {
                 this.AddGrade(result);
             }
+            else if (grade.Length == 1)
+            {
+                char a = char.Parse(grade);
+                this.AddGrade(a);
+            }
             else
             {
                 Console.WriteLine("Podana wartość jest nieprawidłowa, wpisać liczbę od 0 do 100, a w przypadku liter stosować oceny od a do e");
