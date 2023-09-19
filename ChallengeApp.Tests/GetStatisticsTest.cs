@@ -3,109 +3,85 @@ namespace ChallengeApp.Tests
     public class Tests
     {
         [Test]
-        public void WhenNewEmployeeCollectNewGrades_ShouldReturnCorrectMaxUsingGetStatistics()
+        public void WhenNewEmployeeCollectNewGradesInDigits_ShouldReturnCorrectGradeLetter()
         {
             //Arrange
             var employee1 = new Employee("Wojtek", "Kowalski", "42");
             var employee2 = new Employee("Patrycja", "Klon", "22");
 
-            employee1.AddGrade(3);
-            employee1.AddGrade(1);
-            employee1.AddGrade(2);
-            employee1.AddGrade(4);
+            employee1.AddGrade(30);
+            employee1.AddGrade(30);
+            employee1.AddGrade(20);
+            employee1.AddGrade(40);
 
-            employee2.AddGrade(1);
-            employee2.AddGrade(1);
-            employee2.AddGrade(1);
-            employee2.AddGrade(1);
-
-            //Act
-
-            var statistics1 = employee1.GetStatistics();
-            var statistics2 = employee2.GetStatistics();
-
-            //Assert
-            Assert.AreEqual(4, statistics1.Max);
-            Assert.AreEqual(1, statistics2.Max);
-
-        }
-        [Test]
-        public void WhenNewEmployeeCollectNewGrades_ShouldReturnCorrectMinUsingGetStatistics()
-        {
-            //Arrange
-            var employee1 = new Employee("Wojtek", "Kowalski", "42");
-            var employee2 = new Employee("Patrycja", "Klon", "22");
-
-            employee1.AddGrade(5);
-            employee1.AddGrade(1);
-            employee1.AddGrade(4);
-            employee1.AddGrade(7);
-
-            employee2.AddGrade(1);
-            employee2.AddGrade(9);
-            employee2.AddGrade(4);
-            employee2.AddGrade(6);
+            employee2.AddGrade(100);
+            employee2.AddGrade(100);
+            employee2.AddGrade(100);
+            employee2.AddGrade(100);
 
             //Act
 
-            var statistics1 = employee1.GetStatistics();
-            var statistics2 = employee2.GetStatistics();
+            var statistics1 = employee1.GetStatisticsWithWhile();
+            var statistics2 = employee2.GetStatisticsWithWhile();
 
             //Assert
 
-            Assert.AreEqual(1, statistics1.Min);
-            Assert.AreEqual(1, statistics2.Min);
+            Assert.AreEqual('D', statistics1.AvgLetter);
+            Assert.AreEqual('A', statistics2.AvgLetter);
         }
         [Test]
-        public void WhenNewEmployeeCollectNewGrades_ShouldReturnCorrectAvgUsingGetStatistics()
+        public void WhenNewEmployeeCollectNewGradesInLetters_ShouldReturnCorrectGradeLetter()
         {
             //Arrange
             var employee1 = new Employee("Wojtek", "Kowalski", "42");
             var employee2 = new Employee("Patrycja", "Klon", "22");
 
-            employee1.AddGrade(3);
-            employee1.AddGrade(1);
-            employee1.AddGrade(2);
-            employee1.AddGrade(4);
+            employee1.AddGrade('a');
+            employee1.AddGrade('b');
+            employee1.AddGrade('c');
+            employee1.AddGrade('B');
 
-            employee2.AddGrade(1);
-            employee2.AddGrade(1);
-            employee2.AddGrade(1);
-            employee2.AddGrade(1);
+            employee2.AddGrade('d');
+            employee2.AddGrade('d');
+            employee2.AddGrade('d');
+            employee2.AddGrade('D');
 
             //Act
 
-            var statistics1 = employee1.GetStatistics();
-            var statistics2 = employee2.GetStatistics();
-
-            //Assert
-
-            Assert.AreEqual(2.5, statistics1.Avg);
-            Assert.AreEqual(1, statistics2.Avg);
-        }
-        [Test]
-        public void WhenNewEmployeeCollectNewGrades_ShouldReturnCorrectAvgUsingGetStatistics2()
-        {
-            //Arrange
-            var employee1 = new Employee("Wojtek", "Kowalski", "42");
-            var employee2 = new Employee("Patrycja", "Klon", "22");
-
-            employee1.AddGrade(4);
-            employee1.AddGrade(9);
-            employee1.AddGrade(9);
-
-            employee2.AddGrade(5);
-            employee2.AddGrade(9);
-            employee2.AddGrade(3);
-            //Act
-
-            var statistics1 = employee1.GetStatistics();
-            var statistics2 = employee2.GetStatistics();
+            var statistics1 = employee1.GetStatisticsWithWhile();
+            var statistics2 = employee2.GetStatisticsWithWhile();
 
             //Assert 
 
-            Assert.AreEqual(Math.Round(7.33, 2), Math.Round(statistics1.Avg, 2));
-            Assert.AreEqual(Math.Round(5.67, 2), Math.Round(statistics2.Avg, 2));
+            Assert.AreEqual('B', statistics1.AvgLetter);
+            Assert.AreEqual('D', statistics2.AvgLetter);
+        }
+        [Test]
+        public void WhenNewEmployeeCollectNewGradesMixed_ShouldReturnCorrectGradeLetter()
+        {
+            //Arrange
+            var employee1 = new Employee("Wojtek", "Kowalski", "42");
+            var employee2 = new Employee("Patrycja", "Klon", "22");
+
+            employee1.AddGrade(100);
+            employee1.AddGrade('b');
+            employee1.AddGrade(60);
+            employee1.AddGrade('B');
+
+            employee2.AddGrade(40);
+            employee2.AddGrade('d');
+            employee2.AddGrade(40);
+            employee2.AddGrade('D');
+
+            //Act
+
+            var statistics1 = employee1.GetStatisticsWithWhile();
+            var statistics2 = employee2.GetStatisticsWithWhile();
+
+            //Assert 
+
+            Assert.AreEqual('B', statistics1.AvgLetter);
+            Assert.AreEqual('D', statistics2.AvgLetter);
         }
     }
 }

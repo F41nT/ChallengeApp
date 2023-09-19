@@ -3,16 +3,8 @@ using static System.Formats.Asn1.AsnWriter;
 using ChallengeApp;
 
 List<Employee> employees = new List<Employee>();
-
-Employee Employee1 = new Employee("Ewa", "Nowak", "29");
-Employee Employee2 = new Employee("Tomek", "Sokolski", "31");
-Employee Employee3 = new Employee("Kamil", "Motyl", "27");
-Employee Employee4 = new Employee("Dorota", "Kowalska", "36");
-
-var statistics5 = Employee4.GetStatisticsWithWhile();
-
-
 var employee = new Employee("Wojtek", "Kaluza", "43");
+
 Console.WriteLine("Program Wu do oceny pracowników");
 Console.WriteLine("-------------------------------");
 Console.WriteLine();
@@ -55,7 +47,7 @@ Console.WriteLine();
 
 var statistics = employee.GetStatisticsWithWhile();
 
-Console.WriteLine($"Average: {statistics.Avg}");
-Console.WriteLine($"Maximum: {statistics.Max}");
-Console.WriteLine($"Minimum: {statistics.Min}");
-Console.WriteLine($"Ocena: {statistics.AvgLetter}");
+Console.WriteLine($"Średnia: {statistics.Avg}");
+Console.WriteLine($"Najwyższa ocena: {statistics.Max}");
+Console.WriteLine($"Najniższa ocena: {statistics.Min}");
+Console.WriteLine($"Ocena końcowa: {statistics.AvgLetter}");
