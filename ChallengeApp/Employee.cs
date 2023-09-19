@@ -64,35 +64,27 @@ namespace ChallengeApp
                 case 'a':
                     this.grades.Add(100);
                     break;
-            }
-            switch (grade)
-            {
                 case 'B':
                 case 'b':
                     this.grades.Add(80);
                     break;
-            }
-            switch (grade)
-            {
                 case 'C':
                 case 'c':
                     this.grades.Add(60);
                     break;
-            }
-            switch (grade)
-            {
                 case 'D':
                 case 'd':
                     this.grades.Add(40);
                     break;
-            }
-            switch (grade)
-            {
                 case 'E':
                 case 'e':
                     this.grades.Add(20);
                     break;
+                default:
+                    Console.WriteLine("Podana wartość jest nieprawidłowa, wpisać liczbę od 0 do 100, a w przypadku liter stosować oceny od a do e");
+                    break;
             }
+            
         }
         public Statistics GetStatisticsWithWhile()
         {
