@@ -3,7 +3,7 @@ using static System.Formats.Asn1.AsnWriter;
 using ChallengeApp;
 
 List<Employee> employees = new List<Employee>();
-var employee = new Employee("Wojtek", "Kaluza", "43");
+var employee = new Employee("Wojtek","Nowak");
 
 Console.WriteLine("Program Wu do oceny pracowników");
 Console.WriteLine("-------------------------------");

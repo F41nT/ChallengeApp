@@ -2,23 +2,30 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Reflection;
+using System.Xml.Linq;
 
 
 namespace ChallengeApp
 {
-    public class Employee
+    public class Employee : Person
     {
+
         private List<float> grades = new List<float>();
         public Employee(string name, string surname, string age)
+            :base(name, surname, age)
         {
-            this.Name = name;
-            this.Surname = surname;
-            this.Age = age;
+            Console.WriteLine(this.Name +" "+ this.Surname + " " + this.Age);
         }
-        public string Name { get; private set; }
-        public string Surname { get; private set; }
-        public string Age { get; private set; }
+        public Employee(string name, string surname)
+            :this(name, surname, "brak wieku")
+        {
 
+        }
+        public Employee(string name)
+            :this(name, "brak nazwiska", "brak wieku")
+        {
+
+        }
         public float Result
         {
             get
