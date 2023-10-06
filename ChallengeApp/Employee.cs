@@ -7,14 +7,14 @@ using System.Xml.Linq;
 
 namespace ChallengeApp
 {
-    public class Employee : Person
+    public class Employee : Person,IEmployee
     {
 
         private List<float> grades = new List<float>();
         public Employee(string name, string surname, string age)
             :base(name, surname, age)
         {
-            Console.WriteLine(this.Name +" "+ this.Surname + " " + this.Age);
+            
         }
         public Employee(string name, string surname)
             :this(name, surname, "brak wieku")

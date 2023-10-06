@@ -2,8 +2,8 @@
 using static System.Formats.Asn1.AsnWriter;
 using ChallengeApp;
 
-List<Employee> employees = new List<Employee>();
-var employee = new Employee("Wojtek","Nowak");
+List<Supervisor> employees = new List<Supervisor>();
+var supervisor = new Supervisor("Wojtek","Nowak");
 
 Console.WriteLine("Program Wu do oceny pracowników");
 Console.WriteLine("-------------------------------");
@@ -16,7 +16,7 @@ if (input1 == "q" || input1 == "Q")
 }
 try
 {
-    employee.AddGrade(input1);
+    supervisor.AddGrade(input1);
 }
 catch (Exception ex)
 {
@@ -33,7 +33,7 @@ while (true)
     }
     try
     {
-        employee.AddGrade(input2);
+        supervisor.AddGrade(input2);
     }
     catch(Exception ex)
     {
@@ -43,7 +43,7 @@ while (true)
 
 Console.WriteLine();
 
-var statistics = employee.GetStatisticsWithWhile();
+var statistics = supervisor.GetStatisticsWithWhile();
 
 Console.WriteLine($"Średnia: {statistics.Avg}");
 Console.WriteLine($"Najwyższa ocena: {statistics.Max}");
