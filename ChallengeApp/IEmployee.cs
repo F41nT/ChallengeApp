@@ -12,7 +12,7 @@
 
         void AddGrade(char grade);
 
-        Statistics GetStatisticsWithWhile();
+        Statistics GetStatistics();
     }
 }
 

@@ -151,7 +151,7 @@ namespace ChallengeApp
             }
 
         }
-        public Statistics GetStatisticsWithWhile()
+        public Statistics GetStatistics()
         {
             var statistics = new Statistics();
 

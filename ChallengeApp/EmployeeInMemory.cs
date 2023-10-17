@@ -1,40 +1,14 @@
-
-﻿using System;
-using System.Diagnostics;
-using System.Reflection;
-using System.Xml.Linq;
-
-
+﻿
 namespace ChallengeApp
 {
-    public class Employee : Person,IEmployee
+    internal class EmployeeInMemory : EmployeeBase
     {
-
+        public EmployeeInMemory(string name, string surname) 
+            : base(name, surname)
+        {
+        }
         private List<float> grades = new List<float>();
-        public Employee(string name, string surname, string age)
-            :base(name, surname, age)
-        {
-            
-        }
-        public Employee(string name, string surname)
-            :this(name, surname, "brak wieku")
-        {
-
-        }
-        public Employee(string name)
-            :this(name, "brak nazwiska", "brak wieku")
-        {
-
-        }
-        public float Result
-        {
-            get
-            {
-                return this.grades.Sum();
-            }
-        }
-
-        public void AddGrade(float grade)
+        public override void AddGrade(float grade)
         {
             if (grade >= 0 && grade <= 100)
             {
@@ -45,8 +19,12 @@ namespace ChallengeApp
                 throw new Exception("Podana wartość jest nieprawidłowa, wpisać liczbę od 0 do 100, a w przypadku liter stosować oceny od a do e");
             }
         }
-
-        public void AddGrade(string grade)
+        public override void AddGrade(double grade)
+        {
+          float gradeAsFloat = (float) grade;
+            this.AddGrade(gradeAsFloat);  
+        }
+        public override void AddGrade(string grade)
         {
             if (float.TryParse(grade, out float result))
             {
@@ -63,7 +41,8 @@ namespace ChallengeApp
             }
 
         }
-        public void AddGrade(char grade)
+
+        public override void AddGrade(char grade)
         {
             switch (grade)
             {
@@ -90,9 +69,10 @@ namespace ChallengeApp
                 default:
                     throw new Exception("Podana wartość jest nieprawidłowa, wpisać liczbę od 0 do 100, a w przypadku liter stosować oceny od a do e");
             }
-            
+
         }
-        public Statistics GetStatistics()
+
+        public override Statistics GetStatistics()
         {
             var statistics = new Statistics();
 
